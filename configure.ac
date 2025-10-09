@@ -53,7 +53,10 @@ esac
 
 PKG_CHECK_MODULES(curl, [libcurl >= 7.15.5])
 
-PKG_CHECK_MODULES(icu, [icu-i18n >= 50])
+PKG_CHECK_MODULES(icu, [
+        icu-i18n >= 50
+        icu-uc >= 50
+])
 CPPFLAGS="$CPPFLAGS $icu_CFLAGS"
 LIBS="$LIBS $icu_LIBS"
 
